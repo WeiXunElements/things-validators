@@ -1,0 +1,16 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html">
+
+<script>
+  Polymer({
+    is: 'things-validator-phone',
+    
+    behaviors: [
+      Polymer.IronValidatorBehavior,
+    ],
+
+    validate: function(values) {
+    	console.log('Phone validator')
+    }
+  });
+</script>
