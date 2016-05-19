@@ -15,14 +15,30 @@
 -->
 <dom-module is="things-validator-all">
 	<template>
+	<div id="validators">
 		<!-- 포함시켜야 할 validator elements를 추가합니다. -->
 		<things-validator-email></things-validator-email>
 		<things-validator-phone></things-validator-phone>
+	</div>
 	</template>
 
 	<script>
 		Polymer({
-			is: 'things-validator-all'
+			is: 'things-validator-all',
+
+			/**
+			 * 등록된 validator의 명세를 가져 옵니다.
+			 */
+			getValidators: function() {
+				var validators = [];
+				for(var i = 0; i < this.$.validators.childNodes.length ; i++) {
+					var validator = this.$.validators.childNodes[i];
+					if(validator && validator.localName) {
+						validators.push(validator.localName);
+					}
+				}
+				return validators;
+			}
 		})
 	</script>
 </dom-module>
