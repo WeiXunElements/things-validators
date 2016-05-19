@@ -20,9 +20,15 @@
     ],
 
     /**
-     * TODO validation logic 작성
+     * Phone validation logic
      */
     validate: function(values) {
+      var phoneFormat = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3,4})[-. ]?([0-9]{4})$/;
+      if(values.match(phoneFormat) || values == '') {
+        return true;
+      } else {
+        return false;
+      }
     }
   });
 </script>
