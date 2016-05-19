@@ -20,9 +20,15 @@
     ],
 
     /**
-     * TODO validation logic 작성
+     * e mail validation logic
      */
     validate: function(values) {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(values.match(mailformat) || values == '') {  
+        return true;  
+      } else {
+        return false;  
+      }      
     }
   });
 </script>
