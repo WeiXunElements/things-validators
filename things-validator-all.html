@@ -3,8 +3,19 @@
 <link rel="import" href="things-validator-email.html">
 <link rel="import" href="things-validator-phone.html">
 
+<!--
+`<things-validator-all>` Things Validator All 
+구성한 validator를 한번에 import하기 위한 validator container.
+
+  Example
+    
+    <things-input-field
+    	validator="things-validator-email">
+    </things-input-field>
+-->
 <dom-module is="things-validator-all">
 	<template>
+		<!-- 포함시켜야 할 validator elements를 추가합니다. -->
 		<things-validator-email></things-validator-email>
 		<things-validator-phone></things-validator-phone>
 	</template>
