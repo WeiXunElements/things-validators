@@ -1,0 +1,50 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="things-validator-email.html">
+<link rel="import" href="things-validator-phone.html">
+
+<!--
+`<things-validators>` Things Validator All 
+구성한 validator를 한번에 import하기 위한 validator container.
+
+  Example
+    
+    <things-input-field
+    	validator="things-validator-email">
+    </things-input-field>
+-->
+
+<dom-module is="things-validators">
+	<template>
+		<div id="validators">
+			<things-validator-email></things-validator-email>
+			<things-validator-phone></things-validator-phone>
+			<content>
+				<!-- 포함시켜야 할 validator elements를 외부에서 추가합니다. -->
+			</content>
+		</div>
+	</template>
+
+	<script>
+		Polymer({
+			is: 'things-validators',
+
+			/**
+			 * 등록된 validator의 명세를 가져 옵니다.
+			 */
+			allValidators: function() {
+				var validators = [''];
+				var vaidatorNodes = this.$.validators.childNodes;
+
+				for(var i = 0; i < vaidatorNodes.length; i++) {
+					var validator = vaidatorNodes[i];
+					if(validator && validator.localName) {
+						validators.push(validator.localName.replace('things-validator-', 'things.'));
+					}
+				}
+
+				return validators;
+			}
+		});
+	</script>
+</dom-module>
