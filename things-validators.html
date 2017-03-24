@@ -7,19 +7,18 @@
 <link rel="import" href="things-validator-before-today.html">
 <link rel="import" href="things-validator-after-today.html">
 
-<!--
-`<things-validators>` Things Validator All
-구성한 validator를 한번에 import하기 위한 validator container.
+ <!--
+ `<things-validators>` 
+ 구성한 validator를 한번에 import하기 위한 validator container.
 
-Example:
+ Example:
 
-    <things-input-field
-    	validator="things-validator-email">
-    </things-input-field>
+     <things-input-field
+      	validator="things-validator-email">
+     </things-input-field>
 
-
-@demo demo/index.html
--->
+ @demo demo/index.html
+ -->
 
 <dom-module is="things-validators">
 	<template>
@@ -31,7 +30,6 @@ Example:
 			<things-validator-before-today></things-validator-before-today>
 			<things-validator-after-today></things-validator-after-today>
 			<content>
-				<!-- 포함시켜야 할 validator elements를 외부에서 추가합니다. -->
 			</content>
 		</div>
 	</template>
@@ -42,6 +40,7 @@ Example:
 
 			/**
 			 * 등록된 validator의 명세를 가져 옵니다.
+			 * @return [String] validators
 			 */
 			allValidators: function() {
 				var validators = [''];

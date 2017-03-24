@@ -5,7 +5,7 @@
 `<things-validator-a-month-ago>` A Month Ago Validator
 
   Example
-    
+
     <things-input-field
       validator="things-validator-a-month-ago">
     </things-input-field>
@@ -14,13 +14,15 @@
 <script>
   Polymer({
     is: 'things-validator-a-month-ago',
-    
+
     behaviors: [
       Polymer.IronValidatorBehavior,
     ],
 
     /**
      * 오늘 부터 한달 전 까지의 Date를 허용하는 validator
+     * @param  {values} values
+     * @return {Boolean}
      */
     validate: function(values) {
       var selectDate = new Date(values);

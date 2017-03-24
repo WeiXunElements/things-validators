@@ -5,7 +5,7 @@
 `<things-validator-email>` E-mail validator
 
   Example
-    
+
     <things-input-field
       validator="things-validator-email">
     </things-input-field>
@@ -14,21 +14,28 @@
 <script>
   Polymer({
     is: 'things-validator-email',
-    
+
     behaviors: [
       Polymer.IronValidatorBehavior,
     ],
 
     /**
+     * en-us
+     *
      * e mail validation logic
+     ******
+     * ko-kr
+     *
+     * e mail 유효성 검사 로직
+     ****** 
      */
     validate: function(values) {
       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if(values.match(mailformat) || values == '') {  
-        return true;  
+      if(values.match(mailformat) || values == '') {
+        return true;
       } else {
-        return false;  
-      }      
+        return false;
+      }
     }
   });
 </script>

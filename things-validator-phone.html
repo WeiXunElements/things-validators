@@ -5,7 +5,7 @@
 `<things-validator-phone>` Phone number validator
 
   Example
-    
+
     <things-input-field
       validator="things-validator-phone">
     </things-input-field>
@@ -14,13 +14,20 @@
 <script>
   Polymer({
     is: 'things-validator-phone',
-    
+
     behaviors: [
       Polymer.IronValidatorBehavior,
     ],
 
     /**
+     * en-us
+     *
      * Phone validation logic
+     ******
+     * ko-kr
+     *
+     * 폰번호 유효성 검사 로직
+     ****** 
      */
     validate: function(values) {
       var phoneFormat = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3,4})[-. ]?([0-9]{4})$/;

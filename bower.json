@@ -4,7 +4,7 @@
   "authors": [
     "Hatio Lab. <heartyoh@hatiolab.com>"
   ],
-  "description": "An element providing Things Profile",
+  "description": "구성한 validator를 한번에 import하기 위한 validator container",
   "keywords": [
     "web-component",
     "polymer",
@@ -18,12 +18,7 @@
     "/test/"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.2.0",
-    "paper-button": "PolymerElements/paper-button#^1.0.11",
-    "paper-card": "PolymerElements/paper-card#^1.1.1",
-    "paper-dialog-behavior": "PolymerElements/paper-dialog-behavior#^1.2.5",
-    "things-global-behavior": "ThingsElements/things-global-behavior",
-    "things-auth": "ThingsElements/things-auth"
+    "polymer": "Polymer/polymer#^1.2.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
