@@ -61,23 +61,9 @@ subject to an additional IP rights grant found at https://github.com/ThingsEleme
 <body unresolved>
   <demo-snippet class="centered-demo">
     <template>
-      <sample-profile></sample-profile>
-
-      <dom-module id="sample-profile">
-        <template>
-          <things-profile 
-            name="elidom" 
-            email="elidom@example.com" 
-            img="../../../images/profile.png">
-          </things-profile>
-        </template>
-
-        <script>
-          Polymer({
-            is: "sample-profile"
-          });
-        </script>
-      </dom-module>
+      <things-input-field
+        validator="things-validator-a-month-ago">
+      </things-input-field>
     </template>
   </demo-snippet>
 

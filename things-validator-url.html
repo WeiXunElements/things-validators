@@ -5,16 +5,18 @@
 `<things-validator-url>` url validator
 
   Example
-    
+
     <things-input-field
       validator="things-validator-url">
     </things-input-field>
+
+@demo demo/index.html
 -->
 
 <script>
   Polymer({
     is: 'things-validator-url',
-    
+
     behaviors: [
       Polymer.IronValidatorBehavior,
     ],
@@ -24,11 +26,11 @@
      */
     validate: function(values) {
       var urlFormat = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-      if(values.match(urlFormat) || values == '') {  
-        return true;  
+      if(values.match(urlFormat) || values == '') {
+        return true;
       } else {
-        return false;  
-      }      
+        return false;
+      }
     }
   });
 </script>
