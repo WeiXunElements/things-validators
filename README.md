@@ -1,9 +1,9 @@
 # things-validators
 
-## 구성한 validator를 한번에 import하기 위한 validator container.
+## It is a validator container for importing the configured validator at once.
 
 
-### 아래와 같은 validator들을 갖고 있음
+### It has the following validators.
 ```html
 <things-validator-email></things-validator-email>
 <things-validator-phone></things-validator-phone>
@@ -23,8 +23,7 @@ Example:
 
 ## Dependencies
 
-Element dependencies are managed via [Bower](http://bower.io/). You can
-install that via:
+Element dependencies are managed via [Bower](http://bower.io/). You can install that via:
 
     npm install -g bower
 
