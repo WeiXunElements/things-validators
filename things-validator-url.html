@@ -1,9 +1,9 @@
 <!--
 @license
-Copyright © HatioLab Inc. All rights reserved.
+Copyright © 2015-2021 Shenzhen Weixun All rights reserved.
 -->
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html">
+<link rel="import" href="../polymer/polymer.html" />
+<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html" />
 
 <!--
 `<things-validator-url>` url validator
@@ -21,9 +21,7 @@ Copyright © HatioLab Inc. All rights reserved.
   Polymer({
     is: 'things-validator-url',
 
-    behaviors: [
-      Polymer.IronValidatorBehavior,
-    ],
+    behaviors: [Polymer.IronValidatorBehavior],
 
     /**
      * en-us
@@ -33,15 +31,15 @@ Copyright © HatioLab Inc. All rights reserved.
      * ko-kr
      *
      * url 유효성 검사 로직
-     ****** 
+     ******
      */
-    validate: function(values) {
+    validate: function (values) {
       var urlFormat = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-      if(values.match(urlFormat) || values == '') {
+      if (values.match(urlFormat) || values == '') {
         return true;
       } else {
         return false;
       }
-    }
+    },
   });
 </script>

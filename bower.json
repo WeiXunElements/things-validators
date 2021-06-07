@@ -1,8 +1,8 @@
 {
   "name": "things-validators",
-  "version": "v2.2.0",
+  "version": "v2.2.1",
   "authors": [
-    "Hatio Lab. <heartyoh@hatiolab.com>"
+    "Shenzhen Weixun"
   ],
   "description": "구성한 validator를 한번에 import하기 위한 validator container",
   "keywords": [
@@ -11,8 +11,6 @@
     "seed"
   ],
   "main": "things-validators.html",
-  "license": "http://license.hatiolab.com/EULA",
-  "homepage": "http://elements.hatiolab.com/",
   "ignore": [
     "/.*",
     "/test/"

@@ -1,9 +1,9 @@
 <!--
 @license
-Copyright © HatioLab Inc. All rights reserved.
+Copyright © 2015-2021 Shenzhen Weixun All rights reserved.
 -->
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html">
+<link rel="import" href="../polymer/polymer.html" />
+<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html" />
 
 <!--
 `<things-validator-email>` E-mail validator
@@ -19,9 +19,7 @@ Copyright © HatioLab Inc. All rights reserved.
   Polymer({
     is: 'things-validator-email',
 
-    behaviors: [
-      Polymer.IronValidatorBehavior,
-    ],
+    behaviors: [Polymer.IronValidatorBehavior],
 
     /**
      * en-us
@@ -31,15 +29,15 @@ Copyright © HatioLab Inc. All rights reserved.
      * ko-kr
      *
      * e mail 유효성 검사 로직
-     ****** 
+     ******
      */
-    validate: function(values) {
+    validate: function (values) {
       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if(values.match(mailformat) || values == '') {
+      if (values.match(mailformat) || values == '') {
         return true;
       } else {
         return false;
       }
-    }
+    },
   });
 </script>

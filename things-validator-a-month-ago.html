@@ -1,9 +1,9 @@
 <!--
 @license
-Copyright © HatioLab Inc. All rights reserved.
+Copyright © 2015-2021 Shenzhen Weixun All rights reserved.
 -->
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html">
+<link rel="import" href="../polymer/polymer.html" />
+<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html" />
 
 <!--
 `<things-validator-a-month-ago>` A Month Ago Validator
@@ -19,9 +19,7 @@ Copyright © HatioLab Inc. All rights reserved.
   Polymer({
     is: 'things-validator-a-month-ago',
 
-    behaviors: [
-      Polymer.IronValidatorBehavior,
-    ],
+    behaviors: [Polymer.IronValidatorBehavior],
 
     /**
      * 오늘 부터 한달 전 까지의 Date를 허용하는 validator
@@ -29,18 +27,18 @@ Copyright © HatioLab Inc. All rights reserved.
      * @param  {values} values
      * @return {Boolean}
      */
-    validate: function(values) {
+    validate: function (values) {
       var selectDate = new Date(values);
       var toDay = new Date();
       var aMonthAgo = new Date();
-      aMonthAgo.setMonth(aMonthAgo.getMonth() -1);
+      aMonthAgo.setMonth(aMonthAgo.getMonth() - 1);
       var aMonthAgo = new Date(aMonthAgo);
 
-      if(selectDate >= aMonthAgo && selectDate <= toDay || values == '') {
+      if ((selectDate >= aMonthAgo && selectDate <= toDay) || values == '') {
         return true;
       } else {
         return false;
       }
-    }
+    },
   });
 </script>

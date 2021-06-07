@@ -1,9 +1,9 @@
 <!--
 @license
-Copyright © HatioLab Inc. All rights reserved.
+Copyright © 2015-2021 Shenzhen Weixun All rights reserved.
 -->
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html">
+<link rel="import" href="../polymer/polymer.html" />
+<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html" />
 
 <!--
 `<things-validator-phone>` Phone number validator
@@ -19,9 +19,7 @@ Copyright © HatioLab Inc. All rights reserved.
   Polymer({
     is: 'things-validator-phone',
 
-    behaviors: [
-      Polymer.IronValidatorBehavior,
-    ],
+    behaviors: [Polymer.IronValidatorBehavior],
 
     /**
      * en-us
@@ -31,15 +29,15 @@ Copyright © HatioLab Inc. All rights reserved.
      * ko-kr
      *
      * 폰번호 유효성 검사 로직
-     ****** 
+     ******
      */
-    validate: function(values) {
+    validate: function (values) {
       var phoneFormat = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3,4})[-. ]?([0-9]{4})$/;
-      if(values.match(phoneFormat) || values == '') {
+      if (values.match(phoneFormat) || values == '') {
         return true;
       } else {
         return false;
       }
-    }
+    },
   });
 </script>

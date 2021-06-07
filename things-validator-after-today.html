@@ -1,9 +1,9 @@
 <!--
 @license
-Copyright © HatioLab Inc. All rights reserved.
+Copyright © 2015-2021 Shenzhen Weixun All rights reserved.
 -->
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html">
+<link rel="import" href="../polymer/polymer.html" />
+<link rel="import" href="../iron-validator-behavior/iron-validator-behavior.html" />
 
 <!--
 `<things-validator-after-today>` After today Validator
@@ -19,9 +19,7 @@ Copyright © HatioLab Inc. All rights reserved.
   Polymer({
     is: 'things-validator-after-today',
 
-    behaviors: [
-      Polymer.IronValidatorBehavior,
-    ],
+    behaviors: [Polymer.IronValidatorBehavior],
 
     /**
      * 오늘을 기준으로 한달 후 까지를 허용하는 validator
@@ -29,15 +27,15 @@ Copyright © HatioLab Inc. All rights reserved.
      * @param  {String} values
      * @return {Boolean}
      */
-    validate: function(values) {
+    validate: function (values) {
       var selectDate = new Date(values);
       var toDay = new Date();
 
-      if(selectDate >= toDay || values == '') {
+      if (selectDate >= toDay || values == '') {
         return true;
       } else {
         return false;
       }
-    }
+    },
   });
 </script>
